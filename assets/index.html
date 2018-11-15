@@ -28,18 +28,18 @@
                     <div class="form_grid">
                         <label class="form_text" for="genero">Genero:</label>
                         <div class="form_mf">
-                            <a href="http://">MASC</a> <a href="http://">FEM</a>
+                        <a id="form_m" href="#">MASC</a><a id="form_f" href="#">FEM</a>
                         </div>
                         <fieldset style="text-indent: -9999px">
-                        <input class="form_input" id="genero" checked type="radio" name="genero" value="masc">
-                        <input class="form_input" id="genero" type="radio" name="genero" value="fem">
+                        <input class="form_input" id="genero_m" checked type="radio" name="genero" value="masc">
+                        <input class="form_input" id="genero_f" type="radio" name="genero" value="fem">
                         </fieldset>
                         
                     </div>
 
                     <div class="form_grid">
                     <label class="form_text" >Data de Nascimento</label>
-                    <input type="date" name="date">
+                    <input class="form_fundo-branco form_text" type="date" name="date">
                     </div>
 
                     <div class="form_grid">
@@ -59,21 +59,21 @@
                     <div class="form_grid">
                         <label class="form_text">Telefone Celular:</label>
                         <div class="form_fundo">
-                            <input id="cel" class="form_input" type="tel" name="cel">
+                            <input id="cel" class="form_input" type="tel" maxlength="14" name="cel">
                         </div>
                     </div>
                     
                     <div class="form_grid">
                     <label class="form_text" >Telefone FIxo: (opcional)</label>
                         <div class="form_fundo">
-                            <input id="tel" class="form_input" type="tel" name="tel" >
+                            <input id="tel" class="form_input" type="tel" maxlength="13" name="tel" >
                         </div>
                     </div>
                     
                     <div class="form_grid">
                     <label class="form_text" for="cpf">CPF:<span id="errorcpf"></span></label></label>
                     <div class="form_fundo">
-                        <input id="btnTestar" class="form_input" required="required" type="text" id="cpf" name="cpf">
+                        <input id="cpf" class="form_input" required="required" maxlength="10" type="text" id="cpf" name="cpf">
                     </div>
                     </div>
                     <div class="form_grid"></div>
@@ -82,8 +82,8 @@
                         <div class="form_grid">
                             <label class="form_text">CEP:</label>
                             <div class="form_fundo form_fundo-branco">
-                            <input class="form_input form_fundo-branco" type="text" name="cep">
-                            <input class="form_input form_consulta" type="button" value="consulte">
+                            <input id="cep" class="form_input form_fundo-branco" maxlength="8" type="text" name="cep">
+                            <input class="form_input form_consulta" type="button" value="consulte" id="cepid">
                             </div>
                         </div>   
                         <div class="form_grid"></div>    
@@ -92,7 +92,7 @@
                     <div class="form_grid">
                         <label class="form_text" class="form_label" >Endereço:</label>
                         <div class="form_fundo">
-                            <input class="form_input " type="text" name="endereco">
+                            <input id="rua" class="form_input " type="text" name="endereco">
                         </div>
                     </div>
 
@@ -115,7 +115,7 @@
                     <div class="form_grid">
                         <label class="form_text" >Bairro:</label>
                         <div class="form_fundo">
-                            <input class="form_input" type="bairro" name="bairro">
+                            <input id="bairro" class="form_input" type="bairro" name="bairro">
                         </div>
                     </div>
                 
@@ -123,22 +123,24 @@
                         <div class="form_grid form_grid-maior form_grid-espaco">
                             <label class="form_text" >Cidade:</label>
                             <div class="form_fundo">
-                                <input class="form_input" type="texto" name="cidade">
+                                <input id="cidade" class="form_input" type="texto" name="cidade">
                             </div>
                         </div>
                         <div class="form_grid form_grid-menor">
                             <label class="form_text" for="uf">UF: </label>
                             <div class="form_fundo ">
-                                <input class="form_input" type="uf" id="uf" name="uf">
+                                <input id="uf" class="form_input" type="uf" id="uf" name="uf">
                             </div>
                         </div>  
                     </div>    
                     
                     
                     <div class="form_grid">
-                    <label class="form_text" for="anexar">Anexar arquivo (3MB):</label>
-                    <div class="form_fundo">
-                        <input class="form_input" type="file" id="anexar" name="anexar" value="Selecionar">
+                    <label class="form_text">Anexar arquivo (3MB):</label>
+                    <div class="form_fundo form_fundo-branco">
+                        <p id="anexo_text" class="form_input form_fundo-branco"></p>
+                        <input id="anexo" class="form_input form_anexo" type="file" name="anexo" value=" ">
+                        <label class="form_input" for="anexo">Selecionar</label>
                     </div>
                     </div>
                     
@@ -148,7 +150,7 @@
                 <label class="form_text" for="autorizo">
                 <input id="autorizo" name="autorizo" type="checkbox" value="ok">Autorizo  o envio de mensagens
                </label>
-               <span>Estou de acordo com <a href="http://">regulamento</a></span>
+               <span class="form_text">Estou de acordo com <a href="#">regulamento</a></span>
             </div>
 
             <div class="form_right">
