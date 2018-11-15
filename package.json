@@ -1,0 +1,31 @@
+{
+  "name": "form_validacao_mascara",
+  "version": "1.0.0",
+  "description": "Validação do Formulário e aplicação de mascaras",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-server": "^0.1.0",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.0.9",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.0",
+    "gulp-webserver": "^0.9.1",
+    "jquery": "^3.3.1",
+    "jquery-mask-plugin": "^1.14.15",
+    "run-sequence": "^2.2.1"
+  },
+  "scripts": {
+    "dev": "gulp",
+    "production": "gulp --production"
+  },
+  "author": "perry lopes",
+  "license": "MIT"
+}
