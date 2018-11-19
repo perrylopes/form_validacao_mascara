@@ -34,4 +34,21 @@
         align-items: center
         justify-content: center
         
+.form 
+    > input[type="checkbox"] 
+        display: none
+    >label 
+        cursor: pointer
 
+.form > label span{
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.21em;
+    height: 1.5em;
+    background: url('/img/radio.png') 0px center no-repeat;
+}
+
+.form input[type="checkbox"]:checked + label span {
+    background: url('/img/radio.png') -20px center no-repeat;
+}
+   

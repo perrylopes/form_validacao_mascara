@@ -12,7 +12,7 @@ const server = require('gulp-webserver');
 
 
 
-gulp.task('assets',['assets.html', 'assets.stylus', 'assets.js', 'assets.fonts']);
+gulp.task('assets',['assets.html', 'assets.stylus', 'assets.js', 'assets.fonts', 'assets.img']);
 
 gulp.task('assets.html', ()=>{
     return gulp.src('assets/**/*.html')
@@ -45,12 +45,18 @@ gulp.task('assets.fonts', ()=>{
   
 });
 
+gulp.task('assets.img', ()=>{
+    return gulp.src('assets/img/*.*')
+    .pipe(gulp.dest('public/img'))
+})
+
 
 gulp.task('watch', ()=>{
     watch('assets/**/*.html', ()=> gulp.start('assets.html'))
     watch('assets/**/*.styl', ()=> gulp.start('assets.stylus'))
     watch('assets/**/*.js', ()=> gulp.start('assets.js'))
     watch('assets/fonts/*.*', ()=> gulp.start('assets.fonts'))
+    watch('assets/img/*.*', ()=> gulp.start('assets.img'))
 
 });
 
